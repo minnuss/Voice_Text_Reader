@@ -139,16 +139,16 @@ function setVoice(e) {
 
     // if mobile device detected
     if (detectMob()) {
-        console.log(e.target.checked)
+        console.log(this.value)
 
         const options = document.querySelectorAll('option')
         options.forEach(option => {
             console.log(option)
             if (option.checked) {
-                console.log(e.target.checked)
-                console.log(option.checked)
-                console.log(option.value)
-                message.voice = option.value
+                console.log(this.checked)
+                // console.log(option.checked)
+                // console.log(option.value)
+                message.voice = this.value
             }
         })
     }
