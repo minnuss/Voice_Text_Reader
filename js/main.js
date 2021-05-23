@@ -136,20 +136,23 @@ console.log(detectMob())
 // Set voice from voice select option
 function setVoice(e) {
     // console.log(voices)
-    // if desktop device
-    if (!detectMob()) {
-        message.voice = voices.find(voice => voice.name === e.target.value)
-        // if mobile device detected
-    } else if (detectMob()) {
+
+    // if mobile device detected
+    if (detectMob()) {
+        console.log(e.target.checked)
+
         const options = document.querySelectorAll('option')
         options.forEach(option => {
+
             if (option.checked) {
+                console.log(e.target.checked)
                 console.log(option.checked)
                 console.log(option.value)
                 message.voice = option.value
             }
         })
     }
+    message.voice = voices.find(voice => voice.name === e.target.value)
 }
 
 // voices option select
