@@ -143,7 +143,7 @@ function setVoice(e) {
 
         const options = document.querySelectorAll('option')
         options.forEach(option => {
-
+            console.log(option)
             if (option.checked) {
                 console.log(e.target.checked)
                 console.log(option.checked)
@@ -152,6 +152,7 @@ function setVoice(e) {
             }
         })
     }
+
     message.voice = voices.find(voice => voice.name === e.target.value)
 }
 
@@ -169,7 +170,11 @@ btnClose.addEventListener('click', () => {
 })
 
 // Change voice from voice select option
-voicesSelect.addEventListener('change', setVoice)
+if (detectMob()) {
+    document.querySelectorAll('input').addEventListener('change', setVoice)
+} else {
+    voicesSelect.addEventListener('change', setVoice)
+}
 
 // Read text button
 btnRead.addEventListener('click', () => {
