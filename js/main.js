@@ -114,10 +114,40 @@ function speakText() {
     speechSynthesis.speak(message)
 }
 
+// Check if mobile device
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+detectMob()
+console.log(detectMob())
+
 // Set voice from voice select option
 function setVoice(e) {
-    console.log(voices)
-    message.voice = voices.find(voice => voice.name === e.target.value)
+    // console.log(voices)
+    // if desktop device
+    if (!detectMob()) {
+        message.voice = voices.find(voice => voice.name === e.target.value)
+        // if mobile device detected
+    } else if (detectMob()) {
+        const options = document.querySelectorAll('option')
+        options.forEach(option => {
+            if (option.checked) {
+                message.voice = option.value
+            }
+        })
+    }
 }
 
 // voices option select
