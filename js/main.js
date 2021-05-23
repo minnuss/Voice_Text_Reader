@@ -8,47 +8,47 @@ const btnClose = document.querySelector('.close')
 // data for each box
 const data = [
     {
-        image: '../img/drink.jpg',
+        image: 'img/drink.jpg',
         text: "I'm Thirsty"
     },
     {
-        image: '../img/hungry.jpg',
+        image: 'img/hungry.jpg',
         text: "I'm Hungry"
     },
     {
-        image: '../img/happy.jpg',
+        image: 'img/happy.jpg',
         text: "I'm Happy"
     },
     {
-        image: '../img/angry.jpg',
+        image: 'img/angry.jpg',
         text: "I'm Angry"
     },
     {
-        image: '../img/grandma.jpg',
+        image: 'img/grandma.jpg',
         text: "I want to go to Grandma"
     },
     {
-        image: '../img/home.jpg',
+        image: 'img/home.jpg',
         text: "I want to go Home"
     },
     {
-        image: '../img/outside.jpg',
+        image: 'img/outside.jpg',
         text: "I want to go Outside"
     },
     {
-        image: '../img/hurt.jpg',
+        image: 'img/hurt.jpg',
         text: "I'm Hurt"
     },
     {
-        image: '../img/sad.jpg',
+        image: 'img/sad.jpg',
         text: "I'm Sad"
     },
     {
-        image: '../img/scared.jpg',
+        image: 'img/scared.jpg',
         text: "I'm Scared"
     },
     {
-        image: '../img/tired.jpg',
+        image: 'img/tired.jpg',
         text: "I'm Tired"
     }
 ]
