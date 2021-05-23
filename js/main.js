@@ -171,7 +171,10 @@ btnClose.addEventListener('click', () => {
 
 // Change voice from voice select option
 if (detectMob()) {
-    document.querySelectorAll('input').addEventListener('change', setVoice)
+    const inputAll = document.querySelectorAll('input')
+    inputAll.forEach(input => {
+        input.addEventListener('change', setVoice)
+    })
 } else {
     voicesSelect.addEventListener('change', setVoice)
 }
