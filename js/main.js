@@ -118,7 +118,8 @@ function speakText() {
 function setVoice(e) {
     console.log(this.value)
     message.voice = voices.find(voice => voice.name === this.value)
-    voices.forEach(vo => console.log(vo))
+    // voices.forEach(vo => console.log(vo))
+    console.log('i am selected voice', message.voice)
 }
 
 // voices option select
