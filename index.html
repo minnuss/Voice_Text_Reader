@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap"
+        rel="stylesheet">
+    <title>Voice Text Reader</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Voice Text Reader</h1>
+
+        <button id="toggle" class="btn btn-toggle">
+            Toggle Text Box
+        </button>
+
+        <div id="text-box" class="text-box">
+            <div class="close">X</div>
+            <h3>Choose Voice</h3>
+            <select id="voices"></select>
+            <textarea id="text" cols="30" rows="10" placeholder="Enter text to read..."></textarea>
+            <button class="btn" id="read">Read Text</button>
+        </div>
+
+        <main></main>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
