@@ -70,7 +70,8 @@ body .container .text-box .close {
   float: right;
   text-align: right;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 body .container .text-box h3 {

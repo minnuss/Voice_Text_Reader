@@ -116,11 +116,11 @@ function speakText() {
 
 // Set voice from voice select option
 function setVoice(e) {
-    console.log('ja sam this value', this.value)
-    console.log('ja sam e type', e.type)
+    // console.log('ja sam this value', this.value)
+    // console.log('ja sam e type', e.type)
     message.voice = voices.find(voice => voice.name === this.value)
     // voices.forEach(vo => console.log(vo))
-    console.log('i am selected voice', message.voice)
+    // console.log('i am selected voice', message.voice)
 }
 
 // voices option select
