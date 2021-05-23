@@ -144,6 +144,8 @@ function setVoice(e) {
         const options = document.querySelectorAll('option')
         options.forEach(option => {
             if (option.checked) {
+                console.log(option.checked)
+                console.log(option.value)
                 message.voice = option.value
             }
         })
