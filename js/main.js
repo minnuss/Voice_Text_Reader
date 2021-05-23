@@ -114,46 +114,9 @@ function speakText() {
     speechSynthesis.speak(message)
 }
 
-// Check if mobile device
-// function detectMob() {
-//     const toMatch = [
-//         /Android/i,
-//         /webOS/i,
-//         /iPhone/i,
-//         /iPad/i,
-//         /iPod/i,
-//         /BlackBerry/i,
-//         /Windows Phone/i
-//     ];
-
-//     return toMatch.some((toMatchItem) => {
-//         return navigator.userAgent.match(toMatchItem);
-//     });
-// }
-// detectMob()
-// console.log(detectMob())
-
 // Set voice from voice select option
 function setVoice(e) {
-    // console.log(voices)
-
-    // if mobile device detected
-    // if (detectMob()) {
-    //     console.log(this.value)
-
-    //     const options = document.querySelectorAll('option')
-    //     options.forEach(option => {
-    //         console.log(option)
-    //         if (option.checked) {
-    //             console.log(this.checked)
-    //             // console.log(option.checked)
-    //             // console.log(option.value)
-    //             message.voice = this.value
-    //         }
-    //     })
-    // }
-
-    // message.voice = voices.find(voice => voice.name === e.target.value)
+    console.log(this.value)
     message.voice = voices.find(voice => voice.name === this.value)
 }
 
@@ -171,16 +134,6 @@ btnClose.addEventListener('click', () => {
 })
 
 // Change voice from voice select option
-// if (detectMob()) {
-//     // const inputAll = document.querySelectorAll('input')
-//     // inputAll.forEach(input => {
-//     //     input.addEventListener('change', setVoice)
-//     // })
-//     voicesSelect.addEventListener('change', setVoice)
-// } else {
-//     voicesSelect.addEventListener('change', setVoice)
-// }
-
 voicesSelect.addEventListener('change', setVoice)
 
 // Read text button
